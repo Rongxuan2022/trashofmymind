@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>？</title>
+</head>
+<body>
+<div id="randomText">
+    <button onclick="showRandomText()">Show Text</button>
+</div>
+
+<script>
+    
+    var texts = ["我死了，他们很开心。因为整个世界的污点被抹净了。", "我活着，是为了别人。但是，在别人的世界里，我连活着都不配。", "我是个傻逼，写这些话是为了什么？在网上倒情绪垃圾只是找骂而已。", "是，我有罪，我无耻，你们都是对的。我现在就走。", "Nothing" ];
+    
+    
+    function getRandomIndex(count) {
+        return Math.floor(Math.random() * count);
+    }
+    
+    
+    function showRandomText() {
+        var count = texts.length;
+        var index = getRandomIndex(count);
+        
+        var randomTextDiv = document.getElementById("randomText");
+        randomTextDiv.innerHTML = "<p>" + texts[index] + "</p>";
+    }
+</script>
+</body>
+</html>
